@@ -1,0 +1,33 @@
+.menu-container {
+  background-color: $primary-white-color;
+
+  @media screen and (max-width: $preTablet) {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    z-index: 1;
+    padding: 48px 40px;
+    text-align: left;
+
+    &.is-open {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: scroll;
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    height: 80px;
+  }
+}

@@ -1,0 +1,45 @@
+/* СЕКЦІЯ КНОПКИ ФІЛЬТРУ ПОРТФОЛІО*/
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 40px;
+  min-width: 290px;
+
+  @media screen and (min-width: $mobile) {
+    min-width: 450px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+    flex-wrap: nowrap;
+
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.filter__button {
+  @extend %button;
+  min-width: 73px;
+  padding: 6px 22px;
+
+  color: $second-font-color;
+  background-color: $secondary-section-background;
+  font-weight: 500;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  &:hover,
+  &:focus {
+    color: $primary-white-color;
+    background-color: $accent-color;
+    box-shadow: $filter-button-shadow-box;
+  }
+}

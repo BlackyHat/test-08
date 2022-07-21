@@ -1,0 +1,100 @@
+body {
+  min-width: $baseScreen;
+  @include marginAuto();
+  background-color: $primary-white-color;
+  color: $primary-text-color;
+  font-family: $primaryFontFamily;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+*:focus-visible {
+  outline: none;
+}
+
+.container {
+  @include marginAuto();
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: center;
+
+  @media screen and (min-width: $mobile) {
+    max-width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+  }
+}
+
+.section {
+  padding-top: $section-paddings-mobile;
+  padding-bottom: $section-paddings-mobile;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: $section-paddings-desktop;
+    padding-bottom: $section-paddings-desktop;
+  }
+
+  &--no-padding-top {
+    padding-top: 0;
+  }
+
+  &--no-padding {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &__title {
+    color: $second-font-color;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}

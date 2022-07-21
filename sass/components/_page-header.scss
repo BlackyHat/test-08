@@ -1,0 +1,24 @@
+/* СЕКЦІЯ ХЕДЕР */
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100%;
+  background-color: $primary-white-color;
+  z-index: 1;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    height: 80px;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $color-border-under-main-nav;
+  }
+}

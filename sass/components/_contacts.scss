@@ -1,0 +1,157 @@
+// ХЕДЕР КОНТАКТИ
+
+.contacts {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 32px;
+
+    &__icon-mail,
+    &__icon-phone {
+      display: none;
+    }
+
+    &__item {
+      margin-bottom: 32px;
+
+      &:first-child {
+        font-size: 24px;
+      }
+      &:last-child {
+        font-size: 34px;
+      }
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+
+    &__icon-mail {
+      margin-right: 10px;
+      fill: currentColor;
+      width: 14px;
+      height: 10px;
+    }
+
+    &__icon-phone {
+      margin-right: 10px;
+      fill: currentColor;
+      width: 10px;
+      height: 14px;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    display: flex;
+
+    margin-left: auto;
+    flex-direction: row;
+    align-items: center;
+
+    &__item {
+      &:last-child {
+        margin-left: 30px;
+        margin-top: 0;
+      }
+    }
+
+    &__icon-mail {
+      width: 16px;
+      height: 12px;
+    }
+
+    &__icon-phone {
+      width: 10px;
+      height: 16px;
+    }
+  }
+}
+
+.contacts__link {
+  color: $primary-text-color;
+  font-size: inherit;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: $animation-duration;
+  transition-timing-function: $animation-function;
+
+  @media screen and (min-width: $tablet) and (max-width: $preDesktop) {
+    display: flex;
+    font-size: 12px;
+    margin-left: 84px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+// ФУТЕР КОНТАКТИ
+
+.address {
+  margin-bottom: 8px;
+
+  color: $primary-white-color;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  font-style: normal;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 9px;
+  }
+}
+
+.info__contacts {
+  display: block;
+  color: $footer-contacts-text-color;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 9px;
+    }
+  }
+}
+
+.join {
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 20px;
+    color: $primary-white-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.1429;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: $desktop) {
+      text-align: left;
+    }
+  }
+}
